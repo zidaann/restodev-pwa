@@ -66,9 +66,9 @@ const cardDetail = (data) => `
     </div>
     <div class="mb-3">
       <label for="ulasan">Ulasan</label>
-      <textarea name="" id="ulasan" rows="5" placeholder="Ketik ulasan anda..."></textarea>
+      <textarea  id="ulasan" rows="5" placeholder="Ketik ulasan anda..."></textarea>
     </div>
-    <button type="submit" class="btn-review">Kirim</button>
+    <button type="submit" class="btn-review" id="btn-review">Kirim</button>
   </form>
 </div>
 ${data.customerReviews.map((reviewer) => `
@@ -82,12 +82,11 @@ ${data.customerReviews.map((reviewer) => `
     </div>
   </div>
     `).join('')}
-
 </div>
 `;
 
 const card = (data) => `
-      <div class="card">
+        <div class="card">
             <img src=${CONFIG.BASE_IMAGE_URL}/${data.pictureId} " alt="Gambar ${data.name}">
             <div class="card-header" tabindex="0"><a href="#/detail/${data.id}">${data.name}</a></div>
             <div class="card-body">${data.description} </div>
@@ -99,15 +98,24 @@ const card = (data) => `
       `;
 
 const bookmarkTemplate = () => `
-    <button aria-label="like this movie" id="bookmarkButton" class="bookmark">
-      <i class="fa-regular fa-bookmark"></i>
+    <button aria-label="bookmark this restaurant" id="bookmarkButton" class="bookmark">
+    <i class="fa fa-bookmark-o" aria-hidden="true"></i>
     </button>
 `;
+
 const bookmarkedTemplate = () => `
-    <button aria-label="like this movie" id="bookmarkButton" class="bookmark">
-    <i class="fa-solid fa-bookmark"></i>
+    <button aria-label="bookmarked this restaurant" id="bookmarkButton" class="bookmark">
+    <i class="fa fa-bookmark" aria-hidden="true"></i>
     </button>
 `;
+
+// const loader = () => `
+//     <div class="leap-frog" id="loader">
+//       <div class="leap-frog__dot"></div>
+//       <div class="leap-frog__dot"></div>
+//       <div class="leap-frog__dot"></div>
+//     </div>
+// `;
 export {
-  card, cardDetail, bookmarkTemplate, bookmarkedTemplate,
+  card, cardDetail, bookmarkedTemplate, bookmarkTemplate,
 };

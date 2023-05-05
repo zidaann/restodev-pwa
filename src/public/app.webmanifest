@@ -4,7 +4,7 @@
   "name": "RestoDev ",
   "short_name": "Resto Dev",
   "description": "Free Catalogue Restaurant for you",
-  "display": "standalone",
+  "display": "minimal-ui",
   "background_color": "#FFFFFF",
   "theme_color": "#394867",
   "icons": [

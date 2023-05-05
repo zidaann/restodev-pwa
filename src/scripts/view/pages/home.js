@@ -15,6 +15,7 @@ const Home = {
   async afterRender() {
     const restaurants = await RestaurantDbSource.home();
     const restaurantContainer = document.querySelector('#posts');
+
     restaurants.forEach((restaurant) => {
       restaurantContainer.innerHTML += card(restaurant);
     });

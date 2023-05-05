@@ -1,14 +1,14 @@
 import 'regenerator-runtime'; /* for async await transpile */
 import '../styles/main.css';
-// import main from './view/main';
+import './components/footer-bar';
+import './components/app-bar';
 import App from './view/app';
 import swRegister from './utils/sw-register';
-
-// document.addEventListener('DOMContentLoaded', main);
-
-// console.log('Hello coders');
+import HelperDarkMode from './utils/helper-darkMode';
 
 const app = new App({
+  button: document.querySelector('#hamburger'),
+  drawer: document.querySelector('#navigationDrawer'),
   content: document.querySelector('#mainContent'),
 });
 
@@ -18,5 +18,6 @@ window.addEventListener('hashchange', () => {
 
 window.addEventListener('load', () => {
   app.renderPage();
+  HelperDarkMode();
   swRegister();
 });
