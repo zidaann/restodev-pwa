@@ -35,7 +35,7 @@ class AppBar extends HTMLElement {
     }
     </style>    
     <div class="jumbotron" id="jumbotron">
-        <img src="./images/heros/hero-image_2.jpg" alt="Gambar pemanis restaurant" tabindex="0">
+        <img src="./images/heros/hero-image_2.jpg" alt="Gambar pemanis restaurant" tabindex="0" crossorigin="anonymous">
     </div>
             `;
   }
