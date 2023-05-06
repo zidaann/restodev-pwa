@@ -5,6 +5,7 @@ const ReviewHandler = async () => {
   const url = UrlParser.parseActiveUrlWithoutCombiner();
   const name = document.getElementById('nama').value;
   const review = document.getElementById('ulasan').value;
+  console.log(name);
   //   const reviewContainer = document.querySelector('.card-review');
   const date = new Date().toLocaleDateString('id-ID', {
     year: 'numeric',
